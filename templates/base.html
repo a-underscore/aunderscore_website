@@ -15,20 +15,82 @@
 </html>
 
 <style>
-h1 {
-	background-color: #CBD4C2;
-	color: #50514F;
+.bold {
+	background-color: #50514F;
+	color: #247BA0;
 	max-width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 15px;
-	padding: 5px;
+	padding: 10px;
+}
+
+.bold-left {
+	background-color: #50514F;
+	color: #247BA0;
+	max-width: fit-content;
+	margin-right: auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.bold-right {
+	background-color: #50514F;
+	color: #247BA0;
+	max-width: fit-content;
+	margin-left: auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.regular {
+	background-color: #50514F;
+	color: #CBD4C2;
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.regular-left {
+	background-color: #50514F;
+	color: #CBD4C2;
+	max-width: fit-content;
+	margin-right: auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.regular-right {
+	background-color: #50514F;
+	color: #CBD4C2;
+	max-width: fit-content;
+	margin-left: auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.column {
+	column-count: 2
+}
+
+.bg {
+	width: 75%;
+	background-color: #CBD4C299;
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	padding: 10px;
 }
 
 body {
 	background-image: url("{{ url_for('static', filename='img/moon.png') }}");
-	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: black;
+	background-size: cover;
+	backround-position: center center;
 }
 
 .roboto-thin {
@@ -102,5 +164,8 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+
+{% block style %}
+{% endblock %}
 
 </style>
