@@ -9,4 +9,3 @@ wsgi_app = "run:run()"
 bind = f'{server["address"]}:{server["port"]}'
 workers = os.cpu_count() * 2 + 1
 reload = True
-
