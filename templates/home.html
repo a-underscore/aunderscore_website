@@ -4,16 +4,23 @@
 {% block content %}
 
 <title>a_</title>
-<h1 class="bold roboto-bold">Welcome to My Website</h1>
-<div class="bg">
-	<h1 class="bold roboto-bold">About Me</h1>
-	<h2 class="regular roboto-regular">Hi, I’m Brendan Bortz. Online, I go by the alias a_, or aunderscore. I have worked in Rust, Java, Python, C#, and Haskell. This website is written in Python with the Flask framework, and is my first attempt at designing my own pages. I am a game developer, and work on games using Godot, but have also made games using Hex, my 2D renderer that is written with Rust  that uses Vulkan. I am a student at UNC Charlotte, with a major in computer science. As of writing this, I am currently in my sophomore year.</h2>
-	<div class="column">
-		<h1 class="bold-left roboto-bold">My Projects</h1>
-		<h2 class="regular-left roboto-regular">TODO: make web scraper scrape github for project info</h2>
-		<h1 class="bold-left roboto-bold">What I'm Working On</h1>
-		<h2 class="regular-left roboto-regular">I am currently working on a roguelite called PhageOne and an idle game called Pocket Apiculture</h2>
-	</div>
+<h1 class="bold roboto-bold">a_'s Website</h1>
+<div class="bg margined-div">
+	<h1 class="bold-left roboto-bold">About Me</h1>
+	<h2 class="regular-left roboto-regular">Hi, I’m Brendan Bortz. Online, I go by the alias a_, or aunderscore. I have worked in Rust, Java, Python, C#, and Haskell. This website is written in Python with the Flask framework, and is my first attempt at designing my own pages. I am a game developer, and work on games using Godot, but have also made games using Hex, my 2D renderer that is written with Rust  that uses Vulkan. I am a student at UNC Charlotte, with a major in computer science. As of writing this, I am currently in my sophomore year.</h2>
 </div>
+	<div class="bg margined-div">
+		<h1 class="bold-left roboto-bold">My Projects</h1>
+		<h2 class="regular-left roboto-regular">
+  			{% if data %}
+  			{% for (n, u) in data %}
+			<div>
+  				<h2 class="bold-left roboto-bold">{{n}}</h1>
+				<a class="regular-left roboto-regular" href={{u}}>{{u}}</a>
+			</div>
+  			{% endfor %}
+  			{% endif %}
+		</h2>
+	</div>
 
 {% endblock content %}
