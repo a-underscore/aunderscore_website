@@ -1,0 +1,8 @@
+{
+	"server": {
+		"name": "aunderscore_website",
+		"address": "127.0.0.1",
+		"port":  8080
+	},
+	"token": "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"
+}
