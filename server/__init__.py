@@ -10,7 +10,7 @@ load_dotenv()
 with open(os.path.join(os.getcwd(), "config.json")) as file:
     conf = json.load(file)
 
-auth = Auth.Token(os.environ.get("GITHUB_TOKEN"))
+auth = Auth.Token(os.environ.get("NEXT_PUBLIC_GITHUB_TOKEN"))
 github = Github(auth=auth)
 app = Flask(conf["server"]["name"])
 
