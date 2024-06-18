@@ -7,14 +7,17 @@ def home():
     data = [
         (
             repo.stargazers_count,
-            f"{repo.name} (archived)" if repo.archived else repo.name,
+            repo.name,
             repo.clone_url,
         )
-        for repo in reversed(
-            sorted(
-                reversed(list(github.get_user().get_repos())),
-                key=lambda r: r.stargazers_count,
-            )
+        for repo in filter(
+            lambda r: not r.archived,
+            reversed(
+                sorted(
+                    reversed(list(github.get_user().get_repos())),
+                    key=lambda r: r.stargazers_count,
+                )
+            ),
         )
     ]
 
